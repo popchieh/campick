@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+    <script>
+    
+    $(function() {
+      $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange: '1980:2010',
+        dateFormat: 'yy-mm-dd'
+      });
+    });
+    </script>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Campick</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="index.html">首頁</a></li>
+              <li class="active"><a href="Login_Check.html">註冊/登入</a></li>
+              <li><a href="about.html">關於</a></li>
+              <li><a href="contact.html">聯絡我們</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+
+<div class='featurebox_center'>
+
+<div id="users-contain" class="ui-widget"> 
+
+<form class="form-horizontal" id="form1" method="post" action="Member.php">
+
+  <fieldset>
+    <div class="control-group">
+      <legend>學生註冊</legend>
+      <label class="control-label" for="textfield">帳號</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="saccount" name="SACCOUNT" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      <label class="control-label" for="textfield">密碼</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="spwd" name="SPWD" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      <label class="control-label" for="textfield">姓名</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="textfield" name="SNAME" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+
+      <label class="control-label">性別</label>
+      <div class="controls">
+        <input type="radio" id="radio1" name="SEX" value="男" /><label for="radio1">男</label>
+        <input type="radio" id="radio2" name="SEX" value="女" /><label for="radio2">女</label>
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      
+      <label class="control-label" for="textfield3">身分證字號</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="textfield3" name="SID" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      <label class="control-label" for="textfield4">聯絡地址</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="textfield4" name="SADDRESS" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      <label class="control-label" for="textfield5">聯絡電話</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="textfield5" name="SPHONE" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      <label class="control-label" for="textfield6">電子郵件</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="textfield6" name="SMAIL" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      <label class="control-label" for="textfield7">就讀高中</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="textfield7" name="SCHOOL" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      <label class="control-label" for="datepicker">生日</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="datepicker" name="BIRTH" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      <label class="control-label" for="textfield9">病歷</label>
+      <div class="controls">
+        <textarea id="resizable" name="ANAMNESIS" rows="5"></textarea>
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+      <label class="control-label" for="textfield10">監護人</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="textfield10" name="GUARDIAN" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>            
+      <label class="control-label" for="textfield11">監護人聯絡電話</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="textfield11" name="GUARDIANPHONE" />
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>            
+      <label class="control-label" for="select">學校所屬地區</label>
+      <div class="controls">
+        <select name="SCHOOLLOCATION">
+          <option value="1">北部(基北桃竹苗)</option>
+          <option value="2">中部(中彰投)</option>
+          <option value="3">南部(雲嘉南高屏)</option>
+          <option value="4">東部(宜花東)</option>
+          <option value="5">外島地區</option>
+        </select>        
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>            
+      <button type="submit" class="btn">確定</button>
+    </div>
+  </fieldset>
+</form>
+</div>
+
+</div>
+
+
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+<!--    <script src="assets/js/jquery.js"></script> -->
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+
+
+  </body>
+</html>

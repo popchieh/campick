@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  
+
+</head>
+<body style="font-size:62.5%;">
+  
+     <label class="control-label" for="datepicker">生日</label>
+      <div class="controls">
+    <script>
+    
+    $(function() {
+      $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange: '1980:2010',
+        dateFormat: 'yy-mm-dd'
+      });
+    });
+    </script>
+        <input type="text" class="input-xlarge" name="BIRTH" id="datepicker"/>
+        <!-- <p class="help-block">Supporting help text</p> -->
+      </div>
+
+</body>
+</html>

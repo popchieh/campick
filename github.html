@@ -1,0 +1,1053 @@
+
+  
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>v3.2 - Grid Component · Issue #1149 · zurb/foundation</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144.png" />
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="rxXBccn9A4GiZCuBgfIAn9/SRVTQh4Ncbglnpqn1VUA=" name="csrf-token" />
+
+    <link href="https://a248.e.akamai.net/assets.github.com/assets/github-359c875812e7e2caefea930512457a0267ef3e87.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://a248.e.akamai.net/assets.github.com/assets/github2-69262a6bc53331da6e8dc792fc1ce3b074c54135.css" media="screen" rel="stylesheet" type="text/css" />
+    
+
+
+    <script src="https://a248.e.akamai.net/assets.github.com/assets/frameworks-28923941200b998a3e7422badab5b9be240f9be4.js" type="text/javascript"></script>
+    <script src="https://a248.e.akamai.net/assets.github.com/assets/github-194b92b1c9e2a5b90553a492f2b85e8d903b350c.js" type="text/javascript"></script>
+    
+
+        <meta property="og:title" content="foundation"/>
+    <meta property="og:type" content="githubog:gitrepository"/>
+    <meta property="og:url" content="https://github.com/zurb/foundation"/>
+    <meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/gravatars/gravatar-user-420.png?1345673561"/>
+    <meta property="og:site_name" content="GitHub"/>
+    <meta property="og:description" content="I upgraded from 3.1.1 to 3.2 today and noticed one of my sites was no longer responsive. Taking a base install of 3.2 and enabling &quot;foundation/components/grid&quot; will cause the default index.html to become unresponsive."/>
+
+    <meta name="description" content="I upgraded from 3.1.1 to 3.2 today and noticed one of my sites was no longer responsive. Taking a base install of 3.2 and enabling &quot;foundation/components/grid&quot; will cause the default index.html to become unresponsive." />
+  <link href="https://github.com/zurb/foundation/commits/master.atom" rel="alternate" title="Recent Commits to foundation:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_in  windows vis-public env-production ">
+    <div id="wrapper">
+
+    
+    
+
+    
+
+      <div id="header" class="true clearfix">
+        <div class="container clearfix">
+          <a class="site-logo " href="https://github.com/">
+            <img alt="GitHub" class="github-logo-4x" height="30" src="https://a248.e.akamai.net/assets.github.com/images/modules/header/logov7@4x.png?1340659561" />
+            <img alt="GitHub" class="github-logo-4x-hover" height="30" src="https://a248.e.akamai.net/assets.github.com/images/modules/header/logov7@4x-hover.png?1340659561" />
+          </a>
+
+            <a href="/zurb/foundation/notifications" class="notification-indicator tooltipped downwards contextually-unread" title="You have unread notifications in this repository">
+              <span class="mail-status unread"></span>
+            </a>
+
+              
+    <div class="topsearch command-bar-activated">
+      <form accept-charset="UTF-8" action="/search" class="command_bar_form" id="top_search_form" method="get">
+  <a href="/search" class="advanced-search tooltipped downwards command-bar-search" id="advanced_search" title="Advanced Search"><span class="mini-icon mini-icon-advanced-search "></span></a>
+  <input type="text" name="q" id="command-bar" placeholder="Search or Type a Command" tabindex="1" data-username="popchieh" autocapitalize="off" />
+  <span class="mini-icon help tooltipped downwards" title="Show Command Bar Help"></span>
+  <input type="hidden" name="type" value="Everything" />
+  <input type="hidden" name="repo" value="" />
+  <input type="hidden" name="langOverride" value="" />
+  <input type="hidden" name="start_value" value="1" />
+</form>
+
+      <ul class="top-nav">
+          <li class="explore"><a href="https://github.com/explore">Explore</a></li>
+          <li><a href="https://gist.github.com">Gist</a></li>
+          <li><a href="/blog">Blog</a></li>
+        <li><a href="http://help.github.com">Help</a></li>
+      </ul>
+    </div>
+
+
+            
+
+  
+  <div id="userbox">
+    <div id="user">
+      <a href="https://github.com/popchieh"><img height="20" src="https://secure.gravatar.com/avatar/4477bff79a051874352da0c84d9576c7?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
+      <a href="https://github.com/popchieh" class="name">popchieh</a>
+    </div>
+    <ul id="user-links">
+      <li>
+        <a href="/new" id="new_repo" class="tooltipped downwards" title="Create a New Repo"><span class="mini-icon mini-icon-create"></span></a>
+      </li>
+      <li>
+        <a href="/settings/profile" id="account_settings"
+          class="tooltipped downwards"
+          title="Account Settings ">
+          <span class="mini-icon mini-icon-account-settings"></span>
+        </a>
+      </li>
+      <li>
+          <a href="/logout" data-method="post" id="logout" class="tooltipped downwards" title="Sign Out">
+            <span class="mini-icon mini-icon-logout"></span>
+          </a>
+      </li>
+    </ul>
+  </div>
+
+
+
+          
+        </div>
+      </div>
+
+      
+
+      
+
+
+            <div class="site hfeed" itemscope itemtype="http://schema.org/WebPage">
+      <div class="hentry">
+        
+        <div class="pagehead repohead instapaper_ignore readability-menu">
+          <div class="container">
+            <div class="title-actions-bar">
+              
+
+
+                  <ul class="pagehead-actions">
+
+          <li class="subscription">
+              <form accept-charset="UTF-8" action="/notifications/subscribe" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="rxXBccn9A4GiZCuBgfIAn9/SRVTQh4Ncbglnpqn1VUA=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="2573058" />
+  <div class="context-menu-container js-menu-container js-context-menu">
+    <span class="minibutton switcher bigger js-menu-target">
+      <span class="js-context-button">
+          <span class="mini-icon mini-icon-unwatch"></span>Unwatch
+      </span>
+    </span>
+
+    <div class="context-pane js-menu-content">
+      <a href="javascript:;" class="close js-menu-close"><span class="mini-icon mini-icon-remove-close"></span></a>
+      <div class="context-title">Notification status</div>
+
+      <div class="context-body pane-selector">
+        <ul class="js-navigation-container">
+          <li class="selector-item js-navigation-item js-navigation-target ">
+            <span class="mini-icon mini-icon-confirm"></span>
+            <label>
+              <input id="do_included" name="do" type="radio" value="included" />
+              <h4>Not watching</h4>
+              <p>You will only receive notifications when you participate or are mentioned.</p>
+            </label>
+            <span class="context-button-text js-context-button-text">
+              <span class="mini-icon mini-icon-watching"></span>
+              Watch
+            </span>
+          </li>
+          <li class="selector-item js-navigation-item js-navigation-target selected">
+            <span class="mini-icon mini-icon-confirm"></span>
+            <label>
+              <input checked="checked" id="do_subscribed" name="do" type="radio" value="subscribed" />
+              <h4>Watching</h4>
+              <p>You will receive all notifications for this repository.</p>
+            </label>
+            <span class="context-button-text js-context-button-text">
+              <span class="mini-icon mini-icon-unwatch"></span>
+              Unwatch
+            </span>
+          </li>
+          <li class="selector-item js-navigation-item js-navigation-target ">
+            <span class="mini-icon mini-icon-confirm"></span>
+            <label>
+              <input id="do_ignore" name="do" type="radio" value="ignore" />
+              <h4>Ignored</h4>
+              <p>You will not receive notifications for this repository.</p>
+            </label>
+            <span class="context-button-text js-context-button-text">
+              <span class="mini-icon mini-icon-mute"></span>
+              Stop ignoring
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</form>
+          </li>
+
+          <li class="js-toggler-container js-social-container starring-container ">
+            <a href="/zurb/foundation/unstar" class="minibutton js-toggler-target starred" data-remote="true" data-method="post" rel="nofollow">
+              <span class="mini-icon mini-icon-star"></span>Unstar
+            </a><a href="/zurb/foundation/star" class="minibutton js-toggler-target unstarred" data-remote="true" data-method="post" rel="nofollow">
+              <span class="mini-icon mini-icon-star"></span>Star
+            </a><a class="social-count js-social-count" href="/zurb/foundation/stargazers">7,164</a>
+          </li>
+
+              <li><a href="/zurb/foundation/fork" class="minibutton js-toggler-target fork-button lighter" rel="nofollow" data-method="post"><span class="mini-icon mini-icon-fork"></span>Fork</a><a href="/zurb/foundation/network" class="social-count">1,032</a>
+              </li>
+
+
+    </ul>
+
+              <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+                <span class="repo-label"><span>public</span></span>
+                <span class="mega-icon mega-icon-public-repo"></span>
+                <span class="author vcard">
+                  <a href="/zurb" class="url fn" itemprop="url" rel="author">
+                  <span itemprop="title">zurb</span>
+                  </a></span> /
+                <strong><a href="/zurb/foundation" class="js-current-repository">foundation</a></strong>
+              </h1>
+            </div>
+
+            
+
+  <ul class="tabs">
+    <li><a href="/zurb/foundation" highlight="repo_sourcerepo_downloadsrepo_commitsrepo_tagsrepo_branches">Code</a></li>
+    <li><a href="/zurb/foundation/network" highlight="repo_network">Network</a></li>
+    <li><a href="/zurb/foundation/pulls" highlight="repo_pulls">Pull Requests <span class='counter'>23</span></a></li>
+
+      <li><a href="/zurb/foundation/issues" highlight="repo_issues">Issues <span class='counter'>139</span></a></li>
+
+
+
+    <li><a href="/zurb/foundation/graphs" highlight="repo_graphsrepo_contributors">Graphs</a></li>
+
+
+  </ul>
+  
+  
+  
+  
+
+
+            
+          </div>
+        </div><!-- /.repohead -->
+
+        <div id="js-repo-pjax-container" class="container context-loader-container" data-pjax-container>
+          
+<style type="text/css" media="screen">
+  span.labelstyle-555555, .labelstyle-555555.selected {  background:#7f7f7f !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#7f7f7f', endColorstr='#2a2727') !important;background:-webkit-gradient(linear, left top, left bottom, from(#7f7f7f), to(#2a2727)) !important;background:-moz-linear-gradient(top,  #7f7f7f,  #2a2727) !important;  color: #FFFFFF !important;  text-shadow:-1px -1px 0 rgba(0,0,0,0.2);}
+
+span.labelstyle-eeeeee, .labelstyle-eeeeee.selected {  background:#f2f2f2 !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#f2f2f2', endColorstr='#e9dbdb') !important;background:-webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#e9dbdb)) !important;background:-moz-linear-gradient(top,  #f2f2f2,  #e9dbdb) !important;  color: #666666 !important;  text-shadow:1px 1px 0 rgba(255,255,255,0.3);}
+
+span.labelstyle-02d7e1, .labelstyle-02d7e1.selected {  background:#02c4e8 !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#02c4e8', endColorstr='#01d9ca') !important;background:-webkit-gradient(linear, left top, left bottom, from(#02c4e8), to(#01d9ca)) !important;background:-moz-linear-gradient(top,  #02c4e8,  #01d9ca) !important;  color: #006166 !important;  text-shadow:1px 1px 0 rgba(255,255,255,0.3);}
+
+span.labelstyle-e10c02, .labelstyle-e10c02.selected {  background:#e80c02 !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#e80c02', endColorstr='#d90b01') !important;background:-webkit-gradient(linear, left top, left bottom, from(#e80c02), to(#d90b01)) !important;background:-moz-linear-gradient(top,  #e80c02,  #d90b01) !important;  color: #FFFFFF !important;  text-shadow:-1px -1px 0 rgba(0,0,0,0.2);}
+
+span.labelstyle-0b02e1, .labelstyle-0b02e1.selected {  background:#2d02e8 !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#2d02e8', endColorstr='#0119d9') !important;background:-webkit-gradient(linear, left top, left bottom, from(#2d02e8), to(#0119d9)) !important;background:-moz-linear-gradient(top,  #2d02e8,  #0119d9) !important;  color: #FFFFFF !important;  text-shadow:-1px -1px 0 rgba(0,0,0,0.2);}
+
+span.labelstyle-00A5FF, .labelstyle-00A5FF.selected {  background:#0085ff !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#0085ff', endColorstr='#00c4ff') !important;background:-webkit-gradient(linear, left top, left bottom, from(#0085ff), to(#00c4ff)) !important;background:-moz-linear-gradient(top,  #0085ff,  #00c4ff) !important;  color: #FFFFFF !important;  text-shadow:-1px -1px 0 rgba(0,0,0,0.2);}
+
+span.labelstyle-e102d8, .labelstyle-e102d8.selected {  background:#e802b4 !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#e802b4', endColorstr='#b901d9') !important;background:-webkit-gradient(linear, left top, left bottom, from(#e802b4), to(#b901d9)) !important;background:-moz-linear-gradient(top,  #e802b4,  #b901d9) !important;  color: #FFFFFF !important;  text-shadow:-1px -1px 0 rgba(0,0,0,0.2);}
+
+span.labelstyle-d7e102, .labelstyle-d7e102.selected {  background:#d5e802 !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#d5e802', endColorstr='#d8d901') !important;background:-webkit-gradient(linear, left top, left bottom, from(#d5e802), to(#d8d901)) !important;background:-moz-linear-gradient(top,  #d5e802,  #d8d901) !important;  color: #616600 !important;  text-shadow:1px 1px 0 rgba(255,255,255,0.3);}
+
+span.labelstyle-02e10c, .labelstyle-02e10c.selected {  background:#02e81d !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#02e81d', endColorstr='#08d901') !important;background:-webkit-gradient(linear, left top, left bottom, from(#02e81d), to(#08d901)) !important;background:-moz-linear-gradient(top,  #02e81d,  #08d901) !important;  color: #006605 !important;  text-shadow:1px 1px 0 rgba(255,255,255,0.3);}
+
+span.labelstyle-ededed, .labelstyle-ededed.selected {  background:#f1f1f1 !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#f1f1f1', endColorstr='#e8d9d9') !important;background:-webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e8d9d9)) !important;background:-moz-linear-gradient(top,  #f1f1f1,  #e8d9d9) !important;  color: #666666 !important;  text-shadow:1px 1px 0 rgba(255,255,255,0.3);}
+</style>
+
+
+
+<div id="issues_next">
+  <div class="tabnav">
+    <div class="tabnav-right">
+      <div class="tabnav-widget search ">
+        <form accept-charset="UTF-8" action="/zurb/foundation/issues/search" method="get">
+            <a href="/zurb/foundation/issues/search" class="search-link">Search:</a>
+          <span class="fieldwrap">
+            <input type="text" name="q" id="js-issues-quicksearch" value=""
+              placeholder="Issues &amp; Milestones&hellip;"
+              data-hotkey="/"
+              tabindex="1"
+              autocapitalize="off"
+              data-url="/zurb/foundation/issues/quicksearch" /><button
+                type="submit" class="minibutton empty-icon"><span class="mini-icon mini-icon-search-input"></span></button>
+          </span>
+          <div class="autocomplete-results"></div>
+          <div class="quicksearch-loading" style="display: none">
+            <a class="selected initial autocomplete-header autocomplete-item" href="/zurb/foundation/issues/search">
+              See all results
+            </a>
+          </div>
+</form>      </div>
+      <div class="tabnav-widget ">
+        <a href="/zurb/foundation/issues/new" class="minibutton bigger js-new-issue-button" data-hotkey="c">New Issue</a>
+      </div>
+    </div>
+
+    <ul class="tabnav-tabs">
+      <li><a href="/zurb/foundation/issues" class="tabnav-tab selected">Browse Issues</a></li>
+      <li><a href="/zurb/foundation/issues/milestones" class="tabnav-tab ">Milestones</a></li>
+    </ul>
+  </div>
+
+    <div id="show_issue">
+
+    <div class="issue-head clearfix">
+      <span class="back">
+        <span class="mini-icon mini-icon-arr-left"></span>
+        <a href="/zurb/foundation/issues" data-hotkey="u" id="to_isssues_list">Back to issue list</a>
+      </span>
+
+      <span class="number">
+        Issue <strong>#1149</strong>
+      </span>
+    </div><!-- /.issue-head -->
+
+    <div id="discussion_bucket" class="tab-content">
+      <div class="discussion-sidebar">
+        <div class="discussion-stats">
+  
+
+<span class="state-indicator open">
+  Open
+</span>
+
+<p>
+  <strong>0</strong>
+  comments
+</p>
+
+<time id="js-discussion-last-modified" datetime="Thu, 08 Nov 2012 04:41:06 GMT"></time>
+
+  <span id="js-live-notifications" data-poll-url="/zurb/foundation/issues/1149/poll"></span>
+
+
+</div>
+
+<hr />
+
+<div class="discussion-labels">
+  <div class="label-manager">
+
+  <span>Labels</span>
+</div>
+
+<ul class="color-label-list filter-list small">
+  
+</ul>
+
+</div>
+
+      </div>
+
+      <div class="discussion-timeline">
+
+        <div class="js-discussion">
+
+          <div class="discussion-bubble js-comment-container">
+            <img class="discussion-bubble-avatar" height="48" src="https://secure.gravatar.com/avatar/db2ba92cce2622563f476d22c6877cb3?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" />
+
+            <div class="discussion-bubble-content bubble">
+              <div class="discussion-bubble-inner">
+                <div class="js-comment comment discussion-topic starting-comment" id="issue-8194750">
+
+
+                  <div class="discussion-topic-header">
+                    <span class="discussion-topic-author"><a href="/jthale">jthale</a> opened this issue <time class="js-relative-date" datetime="2012-11-07T20:41:06-08:00" title="2012-11-07 20:41:06">November 07, 2012</time></span>
+                    <h2 class="discussion-topic-title">v3.2 - Grid Component</h2>
+                  </div> <!-- /.topic-comment-header -->
+
+                  <div class="discusion-topic-infobar js-infobar">
+                    <div class="milestone infobar-widget">
+  <span class="text js-milestone-infobar-item-wrapper">
+      No milestone
+
+  </span>
+
+</div>
+
+<form accept-charset="UTF-8" action="/zurb/foundation/issues/1149" class="edit_issue" data-remote="true" id="edit_issue_8194750" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="rxXBccn9A4GiZCuBgfIAn9/SRVTQh4Ncbglnpqn1VUA=" /></div>
+  <div class="assignee js-context-menu infobar-widget">
+  <span class="text js-context-button">
+      No one is assigned
+  </span>
+
+</div>
+
+</form>
+                  </div> <!-- /.discusion-topic-infobar -->
+
+                  <div class="comment-content">
+
+                    <div class="edit-comment-hide">
+                      <div class="js-comment-body comment-body markdown-body markdown-format">
+                          <p>I upgraded from 3.1.1 to 3.2 today and noticed one of my sites was no longer responsive. Taking a base install of 3.2 and enabling "foundation/components/grid" will cause the default index.html to become unresponsive.</p>
+                      </div>
+                    </div>
+
+                  </div> <!-- /.comment-content -->
+                </div>
+              </div> <!-- /.discussion-bubble-inner -->
+            </div> <!-- /.discussion-bubble-content -->
+          </div> <!-- /.discussion-bubble -->
+
+          <div class="pull-participation">
+  <p class="quickstat"><a href="#pr_contributors_box" rel="facebox"><strong>1</strong> participant</a></p>
+
+    <a class="avatar tooltipped downwards" title="jthale" href="/jthale"><img height="24" src="https://secure.gravatar.com/avatar/db2ba92cce2622563f476d22c6877cb3?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" /></a>
+</div>
+
+<div id="pr_contributors_box" style="display:none">
+  <h2>People who have participated in this issue</h2>
+  <ul class="facebox-user-list">
+    <li>
+      <img height="24" src="https://secure.gravatar.com/avatar/db2ba92cce2622563f476d22c6877cb3?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
+      <a href="/jthale">jthale</a>
+    </li>
+  </ul>
+</div>
+
+
+          
+
+
+        </div>
+
+          
+
+<div class="discussion-bubble js-comment-container">
+  <img class="discussion-bubble-avatar" height="48" src="https://secure.gravatar.com/avatar/4477bff79a051874352da0c84d9576c7?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" />
+
+  <form accept-charset="UTF-8" action="/zurb/foundation/issue_comments" class="js-new-comment-form js-discussion-update" data-remote="true" data-type="json" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="rxXBccn9A4GiZCuBgfIAn9/SRVTQh4Ncbglnpqn1VUA=" /></div>
+  <div class="discussion-bubble-content bubble">
+    <div class="discussion-bubble-inner">
+      <input type="hidden" name="issue" value="1149" />
+      
+
+<div class="js-previewable-comment-form previewable-comment-form write-selected" data-preview-url="/preview?repository=2573058">
+  <div class="comment-form-head tabnav">
+    <ul class="js-preview-tabs tabnav-tabs">
+      <li><a href="#write_bucket_995" class="tabnav-tab write-tab selected" action="write">Write</a></li>
+      <li><a href="#preview_bucket_995" class="tabnav-tab preview-tab" action="preview">Preview</a></li>
+    </ul>
+    <span class="tabnav-right">
+      <span class="tabnav-widget text">Comments are parsed with <a href="http://github.github.com/github-flavored-markdown/" class="gfm-help" target="_blank">GitHub Flavored Markdown</a></span>
+    </span>
+  </div>
+  <div class="comment-form-error" style="display:none;"></div>
+
+  <div id="write_bucket_995" class="write-content js-write-bucket">
+    <textarea name="comment[body]" tabindex="1" id="995_suggester995" placeholder="Leave a comment" class="js-comment-field js-size-to-fit" data-suggester="995_suggester" ></textarea>
+  </div>
+  <div id="preview_bucket_995" class="preview-content js-preview-bucket">
+    
+<div id="openstruct-89451660" class="js-comment comment">
+  <div class="comment-header normal-comment-header">
+      <img class="comment-header-gravatar" height="22" src="https://secure.gravatar.com/avatar/4477bff79a051874352da0c84d9576c7?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="22" />
+    <a href="/popchieh" class="comment-header-author">popchieh</a>
+    <span class='comment-header-action-text'>
+      <a href="#openstruct-89451660">
+      commented
+      </a>
+    </span>
+
+    <span class="comment-header-right">
+      <a href="#openstruct-89451660" class="comment-header-date"><time class="js-relative-date" datetime="2012-11-08T09:12:15-08:00" title="2012-11-08 09:12:15">November 08, 2012</time></a>
+    </span>
+  </div> <!-- /.comment-header -->
+
+
+  <div class="comment-content">
+    <div class="edit-comment-hide">
+      <div class="js-comment-body comment-body markdown-body ">
+          <p>Nothing to preview</p>
+      </div>
+    </div>
+  </div> <!-- /.comment-content -->
+</div> <!-- /.comment -->
+
+  </div>
+
+  <div class="suggester-container">
+    <div class="suggester js-navigation-container" id="995_suggester" data-url="/zurb/foundation/user_suggestions/issue/8194750">
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="form-actions">
+    
+
+
+
+<button type="submit" class="classy primary" tabindex="2" data-disable-with>
+  Comment
+</button>
+
+  </div>
+  </form> <!-- /.discussion-bubble-content -->
+</div><!-- /.discussion-bubble -->
+
+
+        
+
+<div class="thread-subscription-status clearfix">
+  <span class="mega-icon mega-icon-notifications"></span>
+
+  <form accept-charset="UTF-8" action="/notifications/thread" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="rxXBccn9A4GiZCuBgfIAn9/SRVTQh4Ncbglnpqn1VUA=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="2573058" />
+  <input id="thread_id" name="thread_id" type="hidden" value="8194750" />
+  <input id="thread_class" name="thread_class" type="hidden" value="i" />
+
+  <div class="context-menu-container js-menu-container js-context-menu">
+
+    <span class="minibutton switcher js-menu-target">
+      <span class="js-context-button">
+          <span class="mini-icon mini-icon-mail-status unread"></span>
+          Watching thread
+      </span>
+    </span>
+
+    <div class="context-pane js-menu-content">
+      <a href="javascript:;" class="close js-menu-close"><span class="mini-icon mini-icon-remove-close"></span></a>
+      <div class="context-title">Thread notifications</div>
+
+      <div class="context-body pane-selector">
+        <ul class="js-navigation-container">
+
+          <li class="selector-item js-navigation-item js-navigation-target">
+            <span class="mini-icon mini-icon-confirm"></span>
+            <label>
+              <input checked="checked" id="id_subscribe" name="id" type="radio" value="subscribe" />
+              <h4>Watch</h4>
+              <p>Receive notifications for this thread.</p>
+            </label>
+            <span class="context-button-text js-context-button-text">
+              <span class="mini-icon mini-icon-mail-status unread"></span>
+              Watching thread
+            </span>
+          </li>
+
+
+          <li class="selector-item js-navigation-item js-navigation-target">
+            <span class="mini-icon mini-icon-confirm"></span>
+            <label>
+              <input checked="checked" id="id_mute" name="id" type="radio" value="mute" />
+              <h4>Mute</h4>
+              <p>Ignore all notifications from this thread.</p>
+            </label>
+            <span class="context-button-text js-context-button-text">
+              <span class="mini-icon mini-icon-mute ignored"></span>
+              Thread muted
+            </span>
+          </li>
+
+        </ul>
+      </div>
+
+    </div><!-- /.context-pane -->
+  </div><!-- /.context-menu-container -->
+</form>
+    <p class="reason">You are receiving notifications because you are watching this repository.</p>
+</div>
+
+
+
+      </div><!-- /.discussion-timeline -->
+
+    </div><!-- /#discussion_bucket -->
+    <div class="clear"></div>
+  </div>
+
+</div>
+
+
+        </div>
+      </div>
+      <div class="context-overlay"></div>
+    </div>
+
+      <div id="footer-push"></div><!-- hack for sticky footer -->
+    </div><!-- end of wrapper - hack for sticky footer -->
+
+      <!-- footer -->
+      <div id="footer" >
+        
+  <div class="upper_footer">
+     <div class="container clearfix">
+
+       <h4 id="blacktocat">GitHub Links</h4>
+
+       <ul class="footer_nav">
+         <h4>GitHub</h4>
+         <li><a href="https://github.com/about">About</a></li>
+         <li><a href="https://github.com/blog">Blog</a></li>
+         <li><a href="https://github.com/features">Features</a></li>
+         <li><a href="https://github.com/contact">Contact &amp; Support</a></li>
+         <li><a href="http://training.github.com/">Training</a></li>
+         <li><a href="http://enterprise.github.com/">GitHub Enterprise</a></li>
+         <li><a href="http://status.github.com/">Site Status</a></li>
+       </ul>
+
+       <ul class="footer_nav">
+         <h4>Clients</h4>
+         <li><a href="http://mac.github.com/">GitHub for Mac</a></li>
+         <li><a href="http://windows.github.com/">GitHub for Windows</a></li>
+         <li><a href="http://eclipse.github.com/">GitHub for Eclipse</a></li>
+         <li><a href="http://mobile.github.com/">GitHub Mobile Apps</a></li>
+       </ul>
+
+       <ul class="footer_nav">
+         <h4>Tools</h4>
+         <li><a href="http://get.gaug.es/">Gauges: Web analytics</a></li>
+         <li><a href="http://speakerdeck.com">Speaker Deck: Presentations</a></li>
+         <li><a href="https://gist.github.com">Gist: Code snippets</a></li>
+
+         <h4 class="second">Extras</h4>
+         <li><a href="http://jobs.github.com/">Job Board</a></li>
+         <li><a href="http://shop.github.com/">GitHub Shop</a></li>
+         <li><a href="http://octodex.github.com/">The Octodex</a></li>
+       </ul>
+
+       <ul class="footer_nav">
+         <h4>Documentation</h4>
+         <li><a href="http://help.github.com/">GitHub Help</a></li>
+         <li><a href="http://developer.github.com/">Developer API</a></li>
+         <li><a href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown</a></li>
+         <li><a href="http://pages.github.com/">GitHub Pages</a></li>
+       </ul>
+
+     </div><!-- /.site -->
+  </div><!-- /.upper_footer -->
+
+<div class="lower_footer">
+  <div class="container clearfix">
+    <div id="legal">
+      <ul>
+          <li><a href="https://github.com/site/terms">Terms of Service</a></li>
+          <li><a href="https://github.com/site/privacy">Privacy</a></li>
+          <li><a href="https://github.com/security">Security</a></li>
+      </ul>
+
+      <p>&copy; 2012 <span title="0.12843s from fe18.rs.github.com">GitHub</span> Inc. All rights reserved.</p>
+    </div><!-- /#legal or /#legal_ie-->
+
+  </div><!-- /.site -->
+</div><!-- /.lower_footer -->
+
+
+      </div><!-- /#footer -->
+
+    
+
+<div id="keyboard_shortcuts_pane" class="instapaper_ignore readability-extra" style="display:none">
+  <h2>Keyboard Shortcuts <small><a href="#" class="js-see-all-keyboard-shortcuts">(see all)</a></small></h2>
+
+  <div class="columns threecols">
+    <div class="column first">
+      <h3>Site wide shortcuts</h3>
+      <dl class="keyboard-mappings">
+        <dt>s</dt>
+        <dd>Focus command bar</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>?</dt>
+        <dd>Bring up this help dialog</dd>
+      </dl>
+    </div><!-- /.column.first -->
+
+    <div class="column middle" style='display:none'>
+      <h3>Commit list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selection down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selection up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>c <em>or</em> o <em>or</em> enter</dt>
+        <dd>Open commit</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>y</dt>
+        <dd>Expand URL to its canonical form</dd>
+      </dl>
+    </div><!-- /.column.first -->
+
+    <div class="column last js-hidden-pane" style='display:none'>
+      <h3>Pull request list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selection down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selection up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>o <em>or</em> enter</dt>
+        <dd>Open issue</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> enter</dt>
+        <dd>Submit comment</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> shift p</dt>
+        <dd>Preview comment</dd>
+      </dl>
+    </div><!-- /.columns.last -->
+
+  </div><!-- /.columns.equacols -->
+
+  <div class="js-hidden-pane" >
+    <div class="rule"></div>
+
+    <h3>Issues</h3>
+
+    <div class="columns threecols">
+      <div class="column first">
+        <dl class="keyboard-mappings">
+          <dt>j</dt>
+          <dd>Move selection down</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>k</dt>
+          <dd>Move selection up</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>x</dt>
+          <dd>Toggle selection</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>o <em>or</em> enter</dt>
+          <dd>Open issue</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> enter</dt>
+          <dd>Submit comment</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> shift p</dt>
+          <dd>Preview comment</dd>
+        </dl>
+      </div><!-- /.column.first -->
+      <div class="column last">
+        <dl class="keyboard-mappings">
+          <dt>c</dt>
+          <dd>Create issue</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>l</dt>
+          <dd>Create label</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>i</dt>
+          <dd>Back to inbox</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>u</dt>
+          <dd>Back to issues</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>/</dt>
+          <dd>Focus issues search</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="js-hidden-pane" style='display:none'>
+    <div class="rule"></div>
+
+    <h3>Issues Dashboard</h3>
+
+    <div class="columns threecols">
+      <div class="column first">
+        <dl class="keyboard-mappings">
+          <dt>j</dt>
+          <dd>Move selection down</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>k</dt>
+          <dd>Move selection up</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>o <em>or</em> enter</dt>
+          <dd>Open issue</dd>
+        </dl>
+      </div><!-- /.column.first -->
+    </div>
+  </div>
+
+  <div class="js-hidden-pane" style='display:none'>
+    <div class="rule"></div>
+
+    <h3>Network Graph</h3>
+    <div class="columns equacols">
+      <div class="column first">
+        <dl class="keyboard-mappings">
+          <dt><span class="badmono">←</span> <em>or</em> h</dt>
+          <dd>Scroll left</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt><span class="badmono">→</span> <em>or</em> l</dt>
+          <dd>Scroll right</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt><span class="badmono">↑</span> <em>or</em> k</dt>
+          <dd>Scroll up</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt><span class="badmono">↓</span> <em>or</em> j</dt>
+          <dd>Scroll down</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>t</dt>
+          <dd>Toggle visibility of head labels</dd>
+        </dl>
+      </div><!-- /.column.first -->
+      <div class="column last">
+        <dl class="keyboard-mappings">
+          <dt>shift <span class="badmono">←</span> <em>or</em> shift h</dt>
+          <dd>Scroll all the way left</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>shift <span class="badmono">→</span> <em>or</em> shift l</dt>
+          <dd>Scroll all the way right</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>shift <span class="badmono">↑</span> <em>or</em> shift k</dt>
+          <dd>Scroll all the way up</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>shift <span class="badmono">↓</span> <em>or</em> shift j</dt>
+          <dd>Scroll all the way down</dd>
+        </dl>
+      </div><!-- /.column.last -->
+    </div>
+  </div>
+
+  <div class="js-hidden-pane" style='display:none'>
+    <div class="rule"></div>
+    <div class="columns threecols">
+      <div class="column first js-hidden-pane" style='display:none'>
+        <h3>Source Code Browsing</h3>
+        <dl class="keyboard-mappings">
+          <dt>t</dt>
+          <dd>Activates the file finder</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>l</dt>
+          <dd>Jump to line</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>w</dt>
+          <dd>Switch branch/tag</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>y</dt>
+          <dd>Expand URL to its canonical form</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="js-hidden-pane" style='display:none'>
+    <div class="rule"></div>
+    <div class="columns threecols">
+      <div class="column first">
+        <h3>Browsing Commits</h3>
+        <dl class="keyboard-mappings">
+          <dt><span class="platform-mac">⌘</span><span class="platform-other">ctrl</span> <em>+</em> enter</dt>
+          <dd>Submit comment</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>escape</dt>
+          <dd>Close form</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>p</dt>
+          <dd>Parent commit</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>o</dt>
+          <dd>Other parent commit</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="js-hidden-pane" style='display:none'>
+    <div class="rule"></div>
+    <h3>Notifications</h3>
+
+    <div class="columns threecols">
+      <div class="column first">
+        <dl class="keyboard-mappings">
+          <dt>j</dt>
+          <dd>Move selection down</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>k</dt>
+          <dd>Move selection up</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>o <em>or</em> enter</dt>
+          <dd>Open notification</dd>
+        </dl>
+      </div><!-- /.column.first -->
+
+      <div class="column second">
+        <dl class="keyboard-mappings">
+          <dt>e <em>or</em> shift i <em>or</em> y</dt>
+          <dd>Mark as read</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>shift m</dt>
+          <dd>Mute thread</dd>
+        </dl>
+      </div><!-- /.column.first -->
+    </div>
+  </div>
+
+</div>
+
+    <div id="markdown-help" class="instapaper_ignore readability-extra">
+  <h2>Markdown Cheat Sheet</h2>
+
+  <div class="cheatsheet-content">
+
+  <div class="mod">
+    <div class="col">
+      <h3>Format Text</h3>
+      <p>Headers</p>
+      <pre>
+# This is an &lt;h1&gt; tag
+## This is an &lt;h2&gt; tag
+###### This is an &lt;h6&gt; tag</pre>
+     <p>Text styles</p>
+     <pre>
+*This text will be italic*
+_This will also be italic_
+**This text will be bold**
+__This will also be bold__
+
+*You **can** combine them*
+</pre>
+    </div>
+    <div class="col">
+      <h3>Lists</h3>
+      <p>Unordered</p>
+      <pre>
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b</pre>
+     <p>Ordered</p>
+     <pre>
+1. Item 1
+2. Item 2
+3. Item 3
+   * Item 3a
+   * Item 3b</pre>
+    </div>
+    <div class="col">
+      <h3>Miscellaneous</h3>
+      <p>Images</p>
+      <pre>
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+</pre>
+     <p>Links</p>
+     <pre>
+http://github.com - automatic!
+[GitHub](http://github.com)</pre>
+<p>Blockquotes</p>
+     <pre>
+As Kanye West said:
+
+> We're living the future so
+> the present is our past.
+</pre>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <h3>Code Examples in Markdown</h3>
+  <div class="col">
+      <p>Syntax highlighting with <a href="http://github.github.com/github-flavored-markdown/" title="GitHub Flavored Markdown" target="_blank">GFM</a></p>
+      <pre>
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```</pre>
+    </div>
+    <div class="col">
+      <p>Or, indent your code 4 spaces</p>
+      <pre>
+Here is a Python code example
+without syntax highlighting:
+
+    def foo:
+      if not bar:
+        return true</pre>
+    </div>
+    <div class="col">
+      <p>Inline code for comments</p>
+      <pre>
+I think you should use an
+`&lt;addr&gt;` element here instead.</pre>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="mini-icon mini-icon-exclamation"></span>
+      Something went wrong with that request. Please try again.
+      <a href="#" class="mini-icon mini-icon-remove-close ajax-error-dismiss"></a>
+    </div>
+
+    <div id="logo-popup">
+      <h2>Looking for the GitHub logo?</h2>
+      <ul>
+        <li>
+          <h4>GitHub Logo</h4>
+          <a href="http://github-media-downloads.s3.amazonaws.com/GitHub_Logos.zip"><img alt="Github_logo" src="https://a248.e.akamai.net/assets.github.com/images/modules/about_page/github_logo.png?1340659560" /></a>
+          <a href="http://github-media-downloads.s3.amazonaws.com/GitHub_Logos.zip" class="minibutton download">Download</a>
+        </li>
+        <li>
+          <h4>The Octocat</h4>
+          <a href="http://github-media-downloads.s3.amazonaws.com/Octocats.zip"><img alt="Octocat" src="https://a248.e.akamai.net/assets.github.com/images/modules/about_page/octocat.png?1340659560" /></a>
+          <a href="http://github-media-downloads.s3.amazonaws.com/Octocats.zip" class="minibutton download">Download</a>
+        </li>
+      </ul>
+    </div>
+
+    
+    
+    <span id='server_response_time' data-time='0.13008' data-host='fe18'></span>
+    
+  </body>
+</html>
+
