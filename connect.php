@@ -1,7 +1,7 @@
 <?php
 
-$user = 'ajaxuser';
-$passwd = '1113';
+$user = 'root';
+$passwd = 'root';
 
 $link = mysql_connect('localhost', $user, $passwd);
 if (!@$link) {
